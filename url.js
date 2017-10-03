@@ -14,12 +14,14 @@ window.addEventListener ("load", changeTitle, false);
 function setExtraOptions(item) {
         protocolEnabled = item.protocol;
         pathEnabled = item.path;
+        delimiterStr = item.delimiter;
 }
 
 function prepHostname() {
+    delimiter = (delimiterStr ? delimiterStr : "");
     protocol = (protocolEnabled ? `${window.location.protocol}//` : "");
     path = (pathEnabled ? window.location.pathname : "");
-    return ` - ${protocol}${window.location.hostname}${path}`;
+    return `${delimiter}${protocol}${window.location.hostname}${path}`;
 }
 
 function changeTitle() {

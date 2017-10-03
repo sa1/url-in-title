@@ -8,11 +8,14 @@
     <h1>Preferences</h1>
     <p>Note: Changes will only be shown on new tabs, or after restarting Firefox.</p>
     <form>
+        <input id="delimiterStr" type="text" size="5" maxlength="10">
+        <label for="delimiterStr">Delimiter between title and URL - This allows to set the (up to 10 characters long) string that will be always placed between original window title and the URL added by this addon.</label>
+        <br /><br />
         <input id="protocolEnabled" type="checkbox">
-        <label for="protocolEnabled">Show protocol in title</label>
+        <label for="protocolEnabled">Show protocol in title ? This will include the protocol (before the hostname) in the URL added by this addon.</label>
         <br /><br />
         <input id="pathEnabled" type="checkbox">
-        <label for="pathEnabled">Show path in title (does not show query strings)</label>
+        <label for="pathEnabled">Show path in title ? This will include the path (after the hostname) in the URL added by this addon. Note: This does NOT include query strings!</label>
     </form>
     <script src="options.js"></script>
   </body>

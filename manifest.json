@@ -1,15 +1,15 @@
 {
 
   "manifest_version": 2,
-  "name": "Hostname in title",
+  "name": "URL (delimiter, protocol, hostname, path) in title (for keepass)",
   "version": "1.0",
 
-  "description": "Puts the hostname of the tab in the title",
+  "description": "Adds the URL of the tab to the title:\n * optional delimiter string (defaulting to ' - ')\n * optional protocol string (e.g. 'http://' or 'https://')\n * the URL hostname (e.g. 'foo.org')\n * optionally the the URL path (e.g. '/foo.php')\n\nThis is for instance useful for keepass/keepassX/keepassXC users.",
 
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["hostname.js"],
+      "js": ["url.js"],
       "run_at": "document_end"
     }
   ],
