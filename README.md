@@ -1,8 +1,10 @@
-# hostname-in-title
-Firefox WebExtension that adds the URL to the title:
+# url-in-title
 
-Allows to configure:
- * if to show protocol in title
- * if to show path in title (does not show query strings)
- * optional delimiter string - defaults to ' - '
+Firefox WebExtention that adds the URL of the tab to the windows title:
+ * optional delimiter (e.g. ' - ')
+ * optional protocol (e.g. 'http://')
+ * hostname (e.g. 'foo.org')
+ * optional path (e.g. '/foo.php')
+
+This is for instance useful for keepass/keepassX/keepassXC users.
 
