@@ -1,3 +1,7 @@
+if (document.title == null){
+    document.title = "";
+}
+
 const title = document.querySelector('title');
 let observer = new MutationObserver(function(mutations) {
     changeTitle();
